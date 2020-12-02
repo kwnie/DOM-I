@@ -42,12 +42,21 @@ const siteContent = {
 //logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navMenu = document.querySelectorAll('nav a');
-const navMenu1 = navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
-const navMenu2 = navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
-const navMenu3 = navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
-const navMenu4 = navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
-const navMenu5 = navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
-const navMenu6 = navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
+
+const navMenu0 = navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
+const navMenu1 = navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
+const navMenu2 = navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
+const navMenu3 = navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
+const navMenu4 = navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
+const navMenu5 = navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
+
+const navLogo = document.querySelector('#logo-img').setAttribute('src', siteContent["nav"]["img-src"]);
+
+const h1 = document.querySelector('h1');
+const h1text = h1.textContent = siteContent["cta"]["h1"];
+const lineBreak = document.createElement('br');
+h1text.split(lineBreak);
+
 
 
 
