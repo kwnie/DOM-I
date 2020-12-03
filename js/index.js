@@ -83,9 +83,20 @@ mainContent[2].textContent = siteContent["main-content"]["services-content"];
 mainContent[3].textContent = siteContent["main-content"]["product-content"];
 mainContent[4].textContent = siteContent["main-content"]["vision-content"];
 
-//stretch image
-const stretchImage = document.querySelector('.middle-img');
-stretchImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+//middle image
+const middleImage = document.querySelector('.middle-img');
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//contact
+const contactTitle = document.querySelector('.contact h4');
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+
+const contact = document.querySelectorAll('.contact p')
+contact[0].textContent = siteContent["contact"]["address"];
+////////////add line break////////////////
+contact[1].textContent = siteContent["contact"]["phone"];
+contact[2].textContent = siteContent["contact"]["email"];
+
 
 
 
