@@ -43,14 +43,16 @@ const siteContent = {
 
 //nav
 const navMenu = document.querySelectorAll('nav a');
-//const navLoop = nav.forEach(index => index.textContent = siteContent["nav"]["nav-item-1"]);
+for(i = 0; i < navMenu.length; i++){
+  navMenu[i].textContent = siteContent.nav[`nav-item-${i}`]
+};
 
-navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
-navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
-navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
-navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
-navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
-navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
+//navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
+//navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
+//navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
+//navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
+//navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
+//navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
 
 //logo
 const navLogo = document.querySelector('#logo-img');
@@ -104,9 +106,6 @@ contact[2].textContent = siteContent["contact"]["email"];
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"];
 
-//change nav color
-navMenu.forEach(index => index.style.color = 'green');
-
 //add 2 items to nav
 const blog = document.createElement('a');
 blog.textContent = "Blog";
@@ -115,6 +114,10 @@ document.querySelector('nav').appendChild(blog);
 const mission = document.createElement('a');
 mission.textContent = "Mission";
 document.querySelector('nav').prepend(mission);
+
+//change nav color
+document.querySelectorAll('nav a').forEach(index => index.style.color = 'green');
+
 
 
 
