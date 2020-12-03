@@ -43,6 +43,8 @@ const siteContent = {
 
 //nav
 const navMenu = document.querySelectorAll('nav a');
+//const navLoop = nav.forEach(index => index.textContent = siteContent["nav"]["nav-item-1"]);
+
 navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
 navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
 navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -57,7 +59,7 @@ navLogo.setAttribute('src', siteContent["nav"]["img-src"]);
 //heading
 const heading = document.querySelector('h1');
 heading.textContent = siteContent["cta"]["h1"];
-/////////add line break/////////////////
+///////////add line break//////
 
 //button
 const getStartedButton = document.querySelector('button');
@@ -93,8 +95,8 @@ contactTitle.textContent = siteContent["contact"]["contact-h4"];
 
 //contact info
 const contact = document.querySelectorAll('.contact p')
-contact[0].textContent = siteContent["contact"]["address"];
-////////////add line break////////////////
+const address = contact[0].textContent = siteContent["contact"]["address"];
+////////address.split("\n");
 contact[1].textContent = siteContent["contact"]["phone"];
 contact[2].textContent = siteContent["contact"]["email"];
 
@@ -102,6 +104,17 @@ contact[2].textContent = siteContent["contact"]["email"];
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"];
 
+//change nav color
+//navMenu.forEach(index => index.style.color = 'green');
+
+//add 2 items to nav
+const blog = document.createElement('a');
+blog.textContent = "Blog";
+document.querySelector('nav').appendChild(blog);
+
+const mission = document.createElement('a');
+blog.textContent = "Mission";
+document.querySelector('a').prepend(mission);
 
 
 
