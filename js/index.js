@@ -105,7 +105,7 @@ const footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"];
 
 //change nav color
-//navMenu.forEach(index => index.style.color = 'green');
+navMenu.forEach(index => index.style.color = 'green');
 
 //add 2 items to nav
 const blog = document.createElement('a');
@@ -113,8 +113,8 @@ blog.textContent = "Blog";
 document.querySelector('nav').appendChild(blog);
 
 const mission = document.createElement('a');
-blog.textContent = "Mission";
-document.querySelector('a').prepend(mission);
+mission.textContent = "Mission";
+document.querySelector('nav').prepend(mission);
 
 
 
