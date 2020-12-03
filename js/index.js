@@ -41,21 +41,49 @@ const siteContent = {
 //let logo = document.getElementById("logo-img");
 //logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//nav
 const navMenu = document.querySelectorAll('nav a');
+navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
+navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
+navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
+navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
+navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
+navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
 
-const navMenu0 = navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
-const navMenu1 = navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
-const navMenu2 = navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
-const navMenu3 = navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
-const navMenu4 = navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
-const navMenu5 = navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
+//logo
+const navLogo = document.querySelector('#logo-img');
+navLogo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-const navLogo = document.querySelector('#logo-img').setAttribute('src', siteContent["nav"]["img-src"]);
+//heading
+const heading = document.querySelector('h1');
+heading.textContent = siteContent["cta"]["h1"];
+/////////add line break/////////////////
 
-const h1 = document.querySelector('h1');
-const h1text = h1.textContent = siteContent["cta"]["h1"];
-const lineBreak = document.createElement('br');
-h1text.split(lineBreak);
+//button
+const getStartedButton = document.querySelector('button');
+getStartedButton.textContent = siteContent["cta"]["button"];
+
+//heading img
+const headingImg = document.querySelector('#cta-img');
+headingImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//small headings
+const smallHeading = document.querySelectorAll('h4');
+smallHeading[0].textContent = siteContent["main-content"]["features-h4"];
+smallHeading[1].textContent = siteContent["main-content"]["about-h4"];
+smallHeading[2].textContent = siteContent["main-content"]["services-h4"];
+smallHeading[3].textContent = siteContent["main-content"]["product-h4"];
+smallHeading[4].textContent = siteContent["main-content"]["vision-h4"];
+
+//main content
+const mainContent = document.querySelectorAll('.text-content p');
+mainContent[0].textContent = siteContent["main-content"]["features-content"];
+mainContent[1].textContent = siteContent["main-content"]["about-content"];
+mainContent[2].textContent = siteContent["main-content"]["services-content"];
+mainContent[3].textContent = siteContent["main-content"]["product-content"];
+mainContent[4].textContent = siteContent["main-content"]["vision-content"];
+
+
 
 
 
